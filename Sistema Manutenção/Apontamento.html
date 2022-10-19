@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet" href="apontamento.css">
+</head>
+<body>
+    <section>
+        <h1>Apontamento</h1>
+        <div class="">
+            <div class="header">
+                <div class="search">
+                 <input type="search"  id="search" placeholder="Busque por uma palavra-chave ">
+                 <span class="material-symbols-outlined">search</span>
+                </div>
+                <button id="cadastrarCliente" onclick="openModal()">
+                    <span class="material-symbols-outlined">add</span>
+                    Novo Apontamento
+                </button>
+            </div>
+        </div>
+        <div class="apontamento">
+            <div class="divTable">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Nº OS</th>
+                            <th>Data</th>
+                            <th>Matrícula</th>
+                            <th>Ocorrência</th>
+                            <th>Hora início</th>
+                            <th>Hora Término</th>
+                            <th>Total Minutos</th>
+                            <th class="acao">Ação</th>
+                            
+                        </tr>
+                    </thead>
+                </table>
+            </div>
+            <div class="modal-container">
+                <div class="modal">
+                    <form>
+                        <label for="m-os">Nº OS</label>
+                        <input id="m-os" type="text">
+    
+                        <label for="m-data">Data</label>
+                        <input id="m-data" type="date" required>
+    
+                        <label for="m-matricula">Matrícula</label>
+                        <input id="m-matricula" type="number" required>
+    
+                        <label for="m-ocorrencia">Ocorrência</label>
+                        <input id="m-ocorrencia" type="text" required>
+    
+                        <label for="m-hinicio">Hora início</label>
+                        <input id="m-hinicio" type="time" required>
+    
+                        <label for="m-htermino">Hora Término</label>
+                        <input id="m-htermino" type="time" required>
+    
+                        <label for="m-tminutos">Total Minutos</label>
+                        <input id="m-tminutos" type="number" required>
+                        <button id="btnSalvar">Salvar</button>
+    
+    
+                    </form>
+                </div>
+            </div>
+
+        </div>
+       
+    </section>
+    <script src="./Apontamento.js"></script>
+</body>
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema Manutenção</title>
+    <link rel="stylesheet" href="menu.css">
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp"
+    rel="stylesheet">
+    <link rel="stylesheet" href="apontamento.css">
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    
+</head>
+<body>
+    <div class="container">
+        <img src="" class="logo">
+        
+        <div class="profile-area">
+            
+            <div class="profile">
+                <div class="profile-photo">
+                    <img src="./imagens/user.png"   >
+                   
+                </div>
+                <h5>Manutenção <br>
+               <span>Pifpaf@gmail.com</span></h5>
+                
+                <span class="material-icons-sharp">expand_more</span>
+            </div>
+            
+        </div>
+    </div>
+    <nav class="sidebar">
+      
+        <div class="logo_content">
+            <i class='bx bx-menu' id="btn"></i>
+        
+            <div class="logo">
+                <div class="logo_name">Manutenção</div>
+                <i class='bx bx-wrench'></i>
+                
+            </div>
+        </div>
+        
+        <ul class="nav_list">
+            <li>
+                <a href="./home.html">
+                    <i class="material-symbols-outlined">
+                        home
+                    </i>
+                    <span class="links_name">Home</span>
+                </a>
+                <span class="tooltip">Home</span>
+            </li>
+           
+            <li>
+                <a href="Apontamento.html">
+                    <i class="material-symbols-outlined">
+                        edit_document
+                    </i>
+                    <span class="links_name">Apontamento</span>
+                </a>
+                <span class="tooltip">Apontamento</span>
+            </li>
+            <li>
+                <a href="ordemServiço.html">
+                    <i class="material-symbols-outlined">
+                        list_alt
+                    </i>
+                    <span class="links_name">Ordem de Serviço</span>
+                </a>
+                <span class="tooltip">Ordem Serviço</span>
+            </li>
+            <li>
+                <a href="pedidoMaterial.html">
+                    <i class="material-symbols-outlined">handyman</i>
+                    <span class="links_name">Pedido de Materiais</span>
+                </a>
+                <span class="tooltip">Materiais</span>
+            </li>
+
+          
+          
+        </ul>
+        
+        <div>
+            <a id="log_out" href="#">
+                <i  class="material-symbols-outlined">logout</i>
+                <span class="links_name">Sair</span></i>
+            </a>
+        </div>
+    </nav>
+    <section id="conteudo">
+        <h1>Home</h1>
+        
+    </section>
+    <script>
+        document.querySelectorAll('a').forEach(link => {
+            const conteudo = document.getElementById('conteudo')
+
+            link.onclick = function(e) {
+                e.preventDefault()
+
+                fetch(link.href)
+                    .then(resp => resp.text())
+                    .then(html => conteudo.innerHTML = html)
+            }
+        })
+
+        
+    </script>
+   <script src="./Menu.js"></script>
+   <script src="./Apontamento.js"></script>
+
+</body>
+
+</html>
